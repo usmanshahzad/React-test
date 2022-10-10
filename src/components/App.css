@@ -38,10 +38,11 @@
     margin: 0 auto;
 }
 .model-box .inner {
-    padding: 30px 0 30px 30px;
+    padding: 20px;
 }
 .model-box .inner .commentlist{
     padding: 10px 0;
+    height: 90px;
 }
 .model-box .wrapper button {
     position: absolute;
@@ -51,4 +52,16 @@
 }
 button{
     cursor: pointer;
+}
+table{
+    border-collapse: collapse;
+}
+td:first-child{
+    font-weight: 700;
+}
+td {
+    border: 1px solid #000;
+    min-width: 40px;
+    text-align: center;
+    padding: 0 10px;
 }

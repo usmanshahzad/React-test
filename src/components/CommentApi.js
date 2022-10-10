@@ -21,16 +21,29 @@ function CommentApi({id, setOpen}) {
         <div className= {setOpen ? 'model-box' : ''}>
             <div className='wrapper'>
             <div className='inner'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>BODY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
             {commentList.map(cdata => {
                 return(
-                <div key={cdata.id} className='commentlist'>
-                    <h3>{cdata.id}: {cdata.name}</h3>
-                    <h4>{cdata.email}</h4>
-                    <p>{cdata.body}</p>
-                </div>
+                <tr key={cdata.id} className='commentlist'>
+                    <td>{cdata.id}:</td>
+                    <td>{cdata.name}</td>
+                    <td>{cdata.email}</td>
+                    <td>{cdata.body}</td>
+                </tr>
                 )
             })
         }
+        </tbody>
+        </table>
         </div>
         <button onClick={() => {setOpen(false)}}>Close</button>
         </div>
